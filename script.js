@@ -1,3 +1,10 @@
+window.addEventListener('load', () => {
+    const loader = document.querySelector('.loader');
+    setTimeout(() => {
+        loader.classList.add('saindo');
+        setTimeout(() => loader.remove(), 500);
+    }, 800);
+});
 const secoes = document.querySelectorAll('section');
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
