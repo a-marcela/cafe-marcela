@@ -1,3 +1,6 @@
+ html {
+    scroll-behavior: smooth;
+} 
 :root {
     --cor-1: #7d5a44;
     --cor-2: #a79480;
@@ -28,6 +31,20 @@ nav {
     display: flex;
     gap: 32px;
 }
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--cor-1);
+    transition: width 0.2s ease;
+}
+nav a:hover::after {
+    width: 100%;
+}
+
 section {
     padding: 64px 32px;
 }
@@ -36,7 +53,6 @@ footer {
     justify-content: space-between;
     padding: 48px 32px;
     background-color: var(--cor-4);
-    max-width: 100%;
 }
 .footer-col {
     display: flex;
@@ -50,6 +66,7 @@ footer a {
 nav a {
     color: var(--cor-1);
     text-decoration: none;
+    position: relative;
 }
 main {
     max-width: 1200px;
@@ -69,7 +86,6 @@ main {
     gap: 24px;
     margin-top: 32px;
 }
-
 .card {
     background-color: var(--cor-4);
     padding: 32px;
@@ -77,6 +93,10 @@ main {
     display: flex;
     flex-direction: column;
     gap: 8px;
+    transition: transform 0.2s ease;
+}
+.card:hover {
+    transform: translateY(-8px);
 }
 .card span {
     font-size: 1.2rem;
@@ -108,13 +128,26 @@ main {
     flex-direction: column;
     gap: 16px;
 }
-
 .mapa-placeholder {
     background-color: var(--cor-4);
     border-radius: 8px;
     padding: 64px;
     text-align: center;
     font-size: 3rem;
+}
+.botao {
+    display: inline-block;
+    margin-top: 24px;
+    padding: 16px 32px;
+    background-color: var(--cor-1);
+    color: var(--cor-5);
+    text-decoration: none;
+    border-radius: 4px;
+    font-family: 'DM Sans', sans-serif;
+    transition: background-color 0.2s ease;
+}
+.botao:hover {
+    background-color: var(--cor-2);
 }
 @media (max-width: 768px) {
     header {
@@ -123,50 +156,26 @@ main {
         gap: 16px;
         text-align: center;
     }
-
     nav {
         gap: 16px;
     }
-
     .sobre-grid {
         grid-template-columns: 1fr;
     }
-
     .grid-cardapio {
         grid-template-columns: 1fr;
     }
-
     .contato-grid {
         grid-template-columns: 1fr;
     }
-
     footer {
         flex-direction: column;
         gap: 32px;
     }
-
     h1 {
         font-size: 2rem;
     }
-
     #hero {
         padding: 32px;
-    }
-}
-    .sobre-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .grid-cardapio {
-        grid-template-columns: 1fr;
-    }
-
-    .contato-grid {
-        grid-template-columns: 1fr;
-    }
-
-    footer {
-        flex-direction: column;
-        gap: 32px;
     }
 }
