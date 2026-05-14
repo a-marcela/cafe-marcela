@@ -1,0 +1,15 @@
+{
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": [
+          "entity.name.tag.html",
+          "entity.name.tag"
+        ],
+        "settings": {
+          "foreground": "#FF69B4"
+        }
+      }
+    ]
+  }
+}
