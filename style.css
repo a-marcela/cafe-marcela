@@ -18,6 +18,19 @@ body {
 h1, h2 {
     font-family: 'Playwrite AR Guides', cursive;
 }
+h1 {
+    font-size: 4rem;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 16px;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
 header {
     padding: 24px 32px;
     background-color: var(--cor-4);
@@ -148,6 +161,28 @@ main {
 }
 .botao:hover {
     background-color: var(--cor-2);
+}
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#hero h1 {
+    animation: fadeUp 0.8s ease-out;
+}
+
+#hero p {
+    animation: fadeUp 0.8s ease-out 0.2s both;
+}
+
+#hero .botao {
+    animation: fadeUp 0.8s ease-out 0.4s both;
 }
 @media (max-width: 768px) {
     header {
