@@ -219,6 +219,38 @@ body.dark {
     --cor-4: #2a1f1a;
     --cor-5: #1a1210;
 }
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.formulario input,
+.formulario textarea {
+    padding: 16px;
+    border: 2px solid var(--cor-4);
+    border-radius: 8px;
+    background-color: var(--cor-5);
+    color: var(--cor-1);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+    border-color: var(--cor-2);
+}
+
+.formulario input.erro,
+.formulario textarea.erro {
+    border-color: #e74c3c;
+}
+
+.formulario textarea {
+    resize: vertical;
+}
 @media (max-width: 768px) {
     section {
     opacity: 1;

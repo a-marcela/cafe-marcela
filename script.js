@@ -33,3 +33,36 @@ temaBtn.addEventListener('click', () => {
         localStorage.setItem('tema', 'light');
     }
 });
+const formulario = document.querySelector('.formulario');
+
+formulario.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    const nome = document.querySelector('#nome');
+    const email = document.querySelector('#email');
+    const mensagem = document.querySelector('#mensagem');
+    
+    let valido = true;
+    
+    [nome, email, mensagem].forEach(campo => campo.classList.remove('erro'));
+    
+    if (nome.value.trim() === '') {
+        nome.classList.add('erro');
+        valido = false;
+    }
+    
+    if (!email.value.includes('@')) {
+        email.classList.add('erro');
+        valido = false;
+    }
+    
+    if (mensagem.value.trim().length < 10) {
+        mensagem.classList.add('erro');
+        valido = false;
+    }
+    
+    if (valido) {
+        alert('Mensagem enviada! Obrigada 🎉');
+        formulario.reset();
+    }
+});
