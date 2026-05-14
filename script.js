@@ -66,3 +66,13 @@ formulario.addEventListener('submit', (e) => {
         formulario.reset();
     }
 });
+const botoesAdicionar = document.querySelectorAll('.btn-adicionar');
+
+botoesAdicionar.forEach(btn => {
+    btn.addEventListener('click', () => {
+        const contador = btn.nextElementSibling;
+        contador.textContent = parseInt(contador.textContent) + 1;
+        btn.style.transform = 'scale(1.2)';
+        setTimeout(() => btn.style.transform = 'scale(1)', 150);
+    });
+});

@@ -251,6 +251,37 @@ body.dark {
 .formulario textarea {
     resize: vertical;
 }
+.card-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 8px;
+}
+
+.btn-adicionar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--cor-1);
+    color: var(--cor-5);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.1s ease, background-color 0.2s ease;
+}
+
+.btn-adicionar:hover {
+    background-color: var(--cor-2);
+}
+
+.btn-adicionar:active {
+    transform: scale(0.9);
+}
+
+.contador {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
 @media (max-width: 768px) {
     section {
     opacity: 1;
