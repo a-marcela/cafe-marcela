@@ -83,3 +83,12 @@ botoesAdicionar.forEach(btn => {
         setTimeout(() => btn.style.transform = 'scale(1)', 150);
     });
 });
+const header = document.querySelector('header');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        header.classList.add('fixo');
+    } else {
+        header.classList.remove('fixo');
+    }
+});
